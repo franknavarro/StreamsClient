@@ -1,11 +1,7 @@
 import React from 'react';
 
 const StreamShow = () => {
-  return (
-    <div>
-      StreamShow
-    </div>
-  );
-}
+  return <div>Testing 123</div>;
+};
 
 export default StreamShow;
