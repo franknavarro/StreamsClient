@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {fetchStreams} from '../../actions';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { fetchStreams } from "../../actions";
 
 class StreamList extends Component {
   componentDidMount() {
@@ -17,7 +17,8 @@ class StreamList extends Component {
           </Link>
           <Link
             to={`/streams/delete/${stream.id}`}
-            className="ui button negative">
+            className="ui button negative"
+          >
             Delete
           </Link>
         </div>
@@ -45,7 +46,7 @@ class StreamList extends Component {
   renderCreateButton() {
     if (this.props.isSignedIn) {
       return (
-        <div style={{textAlign: 'right'}}>
+        <div style={{ textAlign: "right" }}>
           <Link to="/streams/new" className="ui button primary">
             Create Stream
           </Link>
@@ -75,5 +76,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {fetchStreams},
+  { fetchStreams },
 )(StreamList);
